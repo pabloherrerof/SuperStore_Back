@@ -22,6 +22,7 @@ class ClientFactory extends Factory
             'phone' => $this->faker->phoneNumber,
             'company' => $this->faker->company,
             'image' => $this->faker->imageUrl(),
+            'user_id' => \App\Models\User::factory(),
         ];
     }
 }

@@ -15,10 +15,16 @@ class Client extends Model
         'phone',
         'address',
         'image',
+        'user_id'
     ];
 
-    public function products()
+    public function categories()
     {
         return $this->hasMany(Category::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }
